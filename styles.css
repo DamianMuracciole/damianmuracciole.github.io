@@ -1,0 +1,216 @@
+/* Custom Properties */
+:root {
+  /* Colors */
+  --dark-grey-primary: #333;
+  --dark-grey-primary-with-opacity: rgba(50, 50, 50, 0.75);
+  --light-grey-primary-with-opacity: rgba(0, 0, 0, 0.25);
+  --dark-font:  #181818;
+  --light-font: #ffe9cb;
+  --link-hover: #ffb87d;
+  /* fonts */
+  --font-titles:'Mulish', sans-serif;
+  --font: 'Poppins', sans-serif;
+}
+
+/*Reset de estilos*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+}
+
+/*Fuente general y tamaño por defecto (1rem)*/
+* {
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  padding: 1rem 0;
+}
+
+/* Estilos de la barra de navegación */
+header{
+  background-color: var(--dark-grey-primary-with-opacity);
+  transition: all 250ms ease-out;
+}
+nav {
+  background-color: inherit;
+  color: var(--light-font);
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: end;
+  padding: 1rem 2rem;
+  width: 100%;
+  position:fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+nav > div > a {
+  font-size: inherit;
+  color: inherit;
+  word-spacing: .5rem;
+  padding: 0 1rem;
+  transition: all 100ms ease-out;
+}
+
+nav > a:hover {
+  color: var(--link-hover);
+  font-weight: 400;
+}
+
+.solid-navBar{
+  background-color: var(--dark-grey-primary);
+}
+
+
+
+/* Estilos de las secciones */
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-1{
+  font-family: var(--font-titles);
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--light-font);
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+
+.title-2{
+  font-family: var(--font-titles);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--light-font);
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.tittle-1-off{
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.title-3{
+  font-family: var(--font);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--light-font);
+}
+
+.title-4{
+  font-family: var(--font);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--dark-font);
+}
+
+.title-5{
+  font-family: var(--font);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--dark-font);
+}
+
+.right{
+  text-align: right;
+}
+
+.secciones{
+  padding: 3rem 1rem;
+  max-width: 992px;
+}
+
+.title-sticky{
+  position: sticky;
+  top: 10vh;
+}
+
+.description-sticky{
+  position: sticky;
+  top: calc(10vh + 12rem);
+}
+
+/* Estilos dedicados*/
+#home{
+  background-image: url('./images/hero-image.jpeg');
+  background-position: 100% 100%;
+  background-size: cover;
+  height: 100vh;
+  font-size: 4rem;
+  font-weight: 400;
+  color: rgb(255, 233, 203);
+}
+
+#home > div {
+  background-color: var(--light-grey-primary-with-opacity);
+  padding: 2rem 4rem ;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#home > div > img {
+  width: 10%;
+  border-radius: 50%;
+  height: auto;
+  position: relative;
+  top: 1rem;
+  left: 15vw;
+}
+
+.back-1{
+  background-color: var(--light-grey-primary-with-opacity);
+}
+
+/* Mis proyectos */
+
+#proyects > .secciones > article {
+  padding: .75rem 0;
+
+}
+
+.proyect-container{
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.proyect-container > img {
+  width: 50%;
+  cursor: pointer;
+}
+
+.proyect-container > p {
+  font-size: .9rem;
+  padding: 4rem 2rem;
+}
+
+
+/* popups images */
+.popupImage{
+  width: 100vw;
+  max-width: 900px;
+  padding: 1rem 3rem;
+}

@@ -41,6 +41,7 @@ header{
   background-color: var(--dark-grey-primary-with-opacity);
   transition: all 250ms ease-out;
 }
+
 nav {
   background-color: inherit;
   color: var(--light-font);
@@ -63,12 +64,13 @@ nav > div > a {
   color: inherit;
   word-spacing: .5rem;
   padding: 0 1rem;
-  transition: all 100ms ease-out;
+  transition: text-shadow 200ms ease;
 }
 
-nav > a:hover {
+nav > div > a:hover {
   color: var(--link-hover);
-  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(245, 233, 71, 0.473) ;
+  z-index: 20;
 }
 
 .solid-navBar{
@@ -187,7 +189,15 @@ section {
 
 #proyects > .secciones > article {
   padding: .75rem 0;
+}
 
+.proyects-animations{
+  margin-top: 10rem;
+  transition: all 1s ease;
+}
+
+.proyects-animations-active{
+  margin-top: 0rem;
 }
 
 .proyect-container{
@@ -198,7 +208,7 @@ section {
 }
 
 .proyect-container > img {
-  width: 50%;
+  width: 40%;
   cursor: pointer;
 }
 
@@ -213,4 +223,26 @@ section {
   width: 100vw;
   max-width: 900px;
   padding: 1rem 3rem;
+}
+
+
+
+
+
+.in-progrees-site{
+  width: 100vw;
+  height: 100vh;
+  background-color: #333E;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  position:fixed;
+  top: 0%;
+  left: 0;
+}
+
+.in-progrees-site > p{
+  color: aliceblue;
+  font-size: 4rem;
 }

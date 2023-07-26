@@ -59,6 +59,20 @@ nav {
   justify-content: space-between;
 }
 
+nav > div.name-nav > span{
+  padding: 0;
+  margin: 0;
+}
+nav > div.name-nav > span.title-nav{
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.show-title-nav{
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
 nav > div > a {
   font-size: inherit;
   color: inherit;
@@ -232,7 +246,7 @@ section {
 .in-progrees-site{
   width: 100vw;
   height: 100vh;
-  background-color: #333E;
+  background-color: #333d;
   display: flex;
   justify-content: space-around;
   align-items: center;

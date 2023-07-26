@@ -1,12 +1,13 @@
 window.addEventListener('load', () =>{
   let header = document.getElementsByTagName('header');
+  const titleNav = document.getElementsByClassName('title-nav')
   const name = document.getElementById('name');
   const description = document.getElementById('description');
   const cafeArte = document.getElementById('cafeArte');
   const humulus = document.getElementById('humulus')
   const worldCup = document.getElementById('worldCup');
   const proyectsAnimations = document.getElementsByClassName('proyects-animations');
-  
+console.log(titleNav);
 
   //------ Lógica para pasar de fondo transparente a fondo con color del header en el index.
   window.addEventListener('scroll', () => {
@@ -39,6 +40,13 @@ window.addEventListener('load', () =>{
       name.classList.remove('tittle-1-off');
       description.classList.add('tittle-1-off');
     }
+
+    if(window.scrollY > window.innerHeight-100) {
+      titleNav[0].style.opacity = '1';
+    }else{
+      titleNav[0].style.opacity = '0';
+    }
+
 
     // efectos para proyectos
     if(window.scrollY > proyectsAnimations[0].getBoundingClientRect().top - 100){

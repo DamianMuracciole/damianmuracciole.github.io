@@ -2,14 +2,28 @@
 :root {
   /* Colors */
   --dark-grey-primary: #333;
-  --dark-grey-primary-with-opacity: rgba(50, 50, 50, 0.75);
-  --light-grey-primary-with-opacity: rgba(0, 0, 0, 0.25);
+  --dark-grey-primary-with-opacity: #323232bf;
+  --light-grey-primary-with-opacity: #00000040;
   --dark-font:  #181818;
   --light-font: #ffe9cb;
   --link-hover: #ffb87d;
   /* fonts */
   --font-titles:'Mulish', sans-serif;
   --font: 'Poppins', sans-serif;
+
+  /* Another color palette */
+  --brown-lioness-01: #160903;
+  --brown-lioness-02: #1f1207;
+  --brown-lioness-03: #52442f;
+  --green-lioness-01: #141603;
+  --green-lioness-02: #1f210c;
+  --green-lioness-03: #292b16;
+  --gray-lioness-00: #4b4a36;
+  --gray-lioness-01: #5d5b47;
+  --gray-lioness-02: #7f7a69;
+  --gray-lioness-03: #9c9586;
+  --gray-lioness-04: #cac7b5;
+
 }
 
 /*Reset de estilos*/
@@ -36,7 +50,7 @@ p{
   padding: 1rem 0;
 }
 
-/* Estilos de la barra de navegación */
+/* --------- Estilos de la barra de navegación --------------*/
 header{
   background-color: var(--dark-grey-primary-with-opacity);
   transition: all 250ms ease-out;
@@ -48,7 +62,7 @@ nav {
   font-size: 1rem;
   font-weight: 200;
   text-align: end;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   width: 100%;
   position:fixed;
   top: 0;
@@ -76,8 +90,7 @@ nav > div.name-nav > span.title-nav{
 nav > div > a {
   font-size: inherit;
   color: inherit;
-  word-spacing: .5rem;
-  padding: 0 1rem;
+  padding: 0 .5rem;
   transition: text-shadow 200ms ease;
 }
 
@@ -92,10 +105,25 @@ nav > div > a:hover {
 }
 
 
+@media(min-width: 768px){
+  nav {
+    padding: 1rem 2rem;
+  }
+}
+
+@media(min-width: 992px){
+  nav > div > a {
+    word-spacing: .5rem;
+    padding: 0 1rem;
+  }
+}
+
+
 
 /* Estilos de las secciones */
 
-section {
+main > section {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -104,18 +132,18 @@ section {
 }
 
 .title-1{
+  padding-top: 4rem;
   font-family: var(--font-titles);
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
   color: var(--light-font);
   opacity: 1;
   transition: opacity 300ms ease-out;
 }
 
-
 .title-2{
   font-family: var(--font-titles);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
   color: var(--light-font);
   opacity: 1;
@@ -129,21 +157,21 @@ section {
 
 .title-3{
   font-family: var(--font);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: var(--light-font);
 }
 
 .title-4{
   font-family: var(--font);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: var(--dark-font);
 }
 
 .title-5{
   font-family: var(--font);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--dark-font);
 }
@@ -167,7 +195,77 @@ section {
   top: calc(10vh + 12rem);
 }
 
-/* Estilos dedicados*/
+@media(min-width: 768px){
+  .title-1{
+    padding-top: 0rem;
+    font-family: var(--font-titles);
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--light-font);
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+  }
+  
+  
+  .title-2{
+    font-family: var(--font-titles);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--light-font);
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .tittle-1-off{
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .title-3{
+    font-family: var(--font);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--light-font);
+  }
+  
+  .title-4{
+    font-family: var(--font);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--dark-font);
+  }
+  
+  .title-5{
+    font-family: var(--font);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-font);
+  }
+  
+  .right{
+    text-align: right;
+  }
+  
+  .secciones{
+    padding: 3rem 1rem;
+    max-width: 992px;
+  }
+  
+  .title-sticky{
+    position: sticky;
+    top: 10vh;
+  }
+  
+  .description-sticky{
+    position: sticky;
+    top: calc(10vh + 12rem);
+  }
+
+}
+
+/* ------------ Estilos dedicados -----------------*/
+
+/*---  SECCION: Home ---*/
 #home{
   background-image: url('./images/hero-image.jpeg');
   background-position: 100% 100%;
@@ -199,7 +297,7 @@ section {
   background-color: var(--light-grey-primary-with-opacity);
 }
 
-/* Mis proyectos */
+/*---  SECCION: Mis proyectos ---*/
 
 #proyects > .secciones > article {
   padding: .75rem 0;
@@ -208,6 +306,11 @@ section {
 .proyects-animations{
   margin-top: 10rem;
   transition: all 1s ease;
+
+}
+
+.proyects-animations:nth-child(even){
+  text-align: right;
 }
 
 .proyects-animations-active{
@@ -218,19 +321,21 @@ section {
   max-width: 1200px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+}
+
+.proyects-animations:nth-child(even) > .proyect-container{
+  flex-flow: row-reverse nowrap;
 }
 
 .proyect-container > img {
-  width: 40%;
+  width: 90%;
   cursor: pointer;
 }
 
-.proyect-container > p {
+.proyect-container > diV{
   font-size: .9rem;
   padding: 4rem 2rem;
 }
-
 
 /* popups images */
 .popupImage{
@@ -239,6 +344,24 @@ section {
   padding: 1rem 3rem;
 }
 
+@media(min-width: 768px){
+  .proyect-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .proyect-container > img {
+    min-width: 45%;
+    cursor: pointer;
+  }
+  
+  .proyect-container > p {
+    font-size: .9rem;
+    padding: 4rem 2rem;
+  }
+}
 
 
 
@@ -259,4 +382,30 @@ section {
 .in-progrees-site > p{
   color: aliceblue;
   font-size: 4rem;
+}
+
+
+/* Contacto */
+#contact > .secciones > article{
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+
+.email,
+.redes{
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+
+
+/* edicion de iconos */
+.icon > img{
+  background-color: beige;
+  color: pink;
+  height: 1.5rem;
+  fill: pink;
 }

@@ -305,12 +305,7 @@ main > section {
 
 .proyects-animations{
   margin-top: 10rem;
-  transition: all 1s ease;
-
-}
-
-.proyects-animations:nth-child(even){
-  text-align: right;
+  transition: all 1.5s ease;
 }
 
 .proyects-animations-active{
@@ -318,13 +313,8 @@ main > section {
 }
 
 .proyect-container{
-  max-width: 1200px;
   display: flex;
-  flex-flow: row nowrap;
-}
-
-.proyects-animations:nth-child(even) > .proyect-container{
-  flex-flow: row-reverse nowrap;
+  flex-flow: column nowrap;
 }
 
 .proyect-container > img {
@@ -346,10 +336,16 @@ main > section {
 
 @media(min-width: 768px){
   .proyect-container{
+    max-width: 1200px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .proyects-animations:nth-child(even) > .proyect-container{
+    flex-flow: row-reverse nowrap;
+    text-align: right;
   }
 
   .proyect-container > img {

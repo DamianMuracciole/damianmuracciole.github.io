@@ -12,7 +12,7 @@
   --font: 'Poppins', sans-serif;
 
   /* Another color palette */
-  --brown-lioness-01: #160903;
+  /* --brown-lioness-01: #160903;
   --brown-lioness-02: #1f1207;
   --brown-lioness-03: #52442f;
   --green-lioness-01: #141603;
@@ -22,7 +22,7 @@
   --gray-lioness-01: #5d5b47;
   --gray-lioness-02: #7f7a69;
   --gray-lioness-03: #9c9586;
-  --gray-lioness-04: #cac7b5;
+  --gray-lioness-04: #cac7b5; */
 
 }
 
@@ -59,7 +59,7 @@ header{
 nav {
   background-color: inherit;
   color: var(--light-font);
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 200;
   text-align: end;
   padding: 1rem 1rem;
@@ -71,11 +71,13 @@ nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav > div.name-nav > span{
   padding: 0;
   margin: 0;
+  font-size: inherit;
 }
 nav > div.name-nav > span.title-nav{
   opacity: 0;
@@ -105,21 +107,6 @@ nav > div > a:hover {
 }
 
 
-@media(min-width: 768px){
-  nav {
-    padding: 1rem 2rem;
-  }
-}
-
-@media(min-width: 992px){
-  nav > div > a {
-    word-spacing: .5rem;
-    padding: 0 1rem;
-  }
-}
-
-
-
 /* Estilos de las secciones */
 
 main > section {
@@ -132,7 +119,7 @@ main > section {
 }
 
 .title-1{
-  padding-top: 4rem;
+  padding-top: 3.5rem;
   font-family: var(--font-titles);
   font-size: 4rem;
   font-weight: 600;
@@ -143,7 +130,7 @@ main > section {
 
 .title-2{
   font-family: var(--font-titles);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: var(--light-font);
   opacity: 1;
@@ -195,7 +182,135 @@ main > section {
   top: calc(10vh + 12rem);
 }
 
+/* ------------ Estilos dedicados -----------------*/
+
+/*---  SECCION: Home ---*/
+#home{
+  background-image: url('./images/hero-image.jpeg');
+  background-position: 100% 100%;
+  background-size: cover;
+  height: 100vh;
+  font-size: 4rem;
+  font-weight: 400;
+  color: rgb(255, 233, 203);
+}
+
+#home > div {
+  background-color: var(--light-grey-primary-with-opacity);
+  text-align: center;
+  padding: 2rem 4rem ;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* #home > div > img {
+  width: 10%;
+  border-radius: 50%;
+  height: auto;
+  position: relative;
+  top: 1rem;
+  left: 15vw;
+} */
+
+.back-1{
+  background-color: var(--light-grey-primary-with-opacity);
+}
+
+/*---  SECCION: Mis proyectos ---*/
+
+#proyects > .secciones > article {
+  padding: .75rem 0;
+}
+
+.proyects-animations{
+  margin-top: 10rem;
+  transition: all 1.5s ease;
+}
+
+.proyects-animations-active{
+  margin-top: 0rem;
+}
+
+.proyect-container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.proyect-container > img {
+  width: 95%;
+  margin: 2.5%;
+  cursor: pointer;
+}
+
+.proyect-container > div{
+  font-size: .9rem;
+  padding: 2.5%;
+}
+
+/* popups images */
+.popupImage{
+  width: 100vw;
+  max-width: 900px;
+  padding: 1rem 3rem;
+}
+
+.in-progrees-site{
+  width: 100vw;
+  height: 100vh;
+  background-color: #333d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  position:fixed;
+  top: 0%;
+  left: 0;
+}
+
+.in-progrees-site > p{
+  color: aliceblue;
+  font-size: 4rem;
+}
+
+
+/* Contacto */
+#contact > .secciones > article{
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+
+.email,
+.redes{
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* edicion de iconos */
+.icon > img{
+  background-color: beige;
+  color: pink;
+  height: 1.5rem;
+  fill: pink;
+}
+
+
+
+
+/* medias query */
+
+@media(min-width: 576px){
+  nav {
+  font-size: 1rem;
+  }
+}
+
 @media(min-width: 768px){
+  nav {
+    padding: 1rem 2rem;
+  } 
   .title-1{
     padding-top: 0rem;
     font-family: var(--font-titles);
@@ -205,7 +320,6 @@ main > section {
     opacity: 1;
     transition: opacity 300ms ease-out;
   }
-  
   
   .title-2{
     font-family: var(--font-titles);
@@ -245,6 +359,14 @@ main > section {
   .right{
     text-align: right;
   }
+
+  #home > div {
+    text-align: start;
+    padding: 2rem 4rem ;
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
   
   .secciones{
     padding: 3rem 1rem;
@@ -260,81 +382,6 @@ main > section {
     position: sticky;
     top: calc(10vh + 12rem);
   }
-
-}
-
-/* ------------ Estilos dedicados -----------------*/
-
-/*---  SECCION: Home ---*/
-#home{
-  background-image: url('./images/hero-image.jpeg');
-  background-position: 100% 100%;
-  background-size: cover;
-  height: 100vh;
-  font-size: 4rem;
-  font-weight: 400;
-  color: rgb(255, 233, 203);
-}
-
-#home > div {
-  background-color: var(--light-grey-primary-with-opacity);
-  padding: 2rem 4rem ;
-  margin: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-#home > div > img {
-  width: 10%;
-  border-radius: 50%;
-  height: auto;
-  position: relative;
-  top: 1rem;
-  left: 15vw;
-}
-
-.back-1{
-  background-color: var(--light-grey-primary-with-opacity);
-}
-
-/*---  SECCION: Mis proyectos ---*/
-
-#proyects > .secciones > article {
-  padding: .75rem 0;
-}
-
-.proyects-animations{
-  margin-top: 10rem;
-  transition: all 1.5s ease;
-}
-
-.proyects-animations-active{
-  margin-top: 0rem;
-}
-
-.proyect-container{
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-.proyect-container > img {
-  width: 90%;
-  cursor: pointer;
-}
-
-.proyect-container > diV{
-  font-size: .9rem;
-  padding: 4rem 2rem;
-}
-
-/* popups images */
-.popupImage{
-  width: 100vw;
-  max-width: 900px;
-  padding: 1rem 3rem;
-}
-
-@media(min-width: 768px){
   .proyect-container{
     max-width: 1200px;
     display: flex;
@@ -342,7 +389,7 @@ main > section {
     justify-content: center;
     align-items: center;
   }
-
+  
   .proyects-animations:nth-child(even) > .proyect-container{
     flex-flow: row-reverse nowrap;
     text-align: right;
@@ -353,55 +400,22 @@ main > section {
     cursor: pointer;
   }
   
-  .proyect-container > p {
+  .proyect-container > div >  p {
     font-size: .9rem;
-    padding: 4rem 2rem;
+    /* padding: 4rem 2rem; */
+  }
+
+}
+
+@media(min-width: 992px){
+  nav > div > a {
+    word-spacing: .5rem;
+    padding: 0 1rem;
   }
 }
 
-
-
-
-.in-progrees-site{
-  width: 100vw;
-  height: 100vh;
-  background-color: #333d;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 50;
-  position:fixed;
-  top: 0%;
-  left: 0;
+@media(min-width: 1200px){
 }
 
-.in-progrees-site > p{
-  color: aliceblue;
-  font-size: 4rem;
-}
-
-
-/* Contacto */
-#contact > .secciones > article{
-  display: flex;
-  flex-flow: row nowrap;
-
-}
-
-.email,
-.redes{
-  width: 50%;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-
-
-
-/* edicion de iconos */
-.icon > img{
-  background-color: beige;
-  color: pink;
-  height: 1.5rem;
-  fill: pink;
+@media(min-width: 1400px){
 }

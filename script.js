@@ -2,6 +2,9 @@ window.addEventListener('load', () =>{
   let header = document.getElementsByTagName('header');
   const titleNav = document.getElementsByClassName('title-nav');
   const navMobile = document.getElementById('nav-mobile');
+  const openMenu = document.getElementById('open-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const linksMovile = document.getElementById('links-movile')
   const navPC = document.getElementById('nav-pc');
   const name = document.getElementById('name');
   const description = document.getElementById('description');
@@ -9,40 +12,25 @@ window.addEventListener('load', () =>{
   const humulus = document.getElementById('humulus')
   const worldCup = document.getElementById('worldCup');
   const proyectsAnimations = document.getElementsByClassName('proyects-animations');
-console.log(navMobile);
+
   //------ Lógica para pasar de fondo transparente a fondo con color del header en el index.
   window.addEventListener('scroll', () => {
     scrollEfects();
   });
 
-  //navBar responsive
-  
-  //------ Lógica de mostrar el menu en modo mobile.
-  // Abrir el menú
-  // menuOpen.addEventListener('click', () => {
-  //   menuOpen.style.display = 'none';
-  //   menuClose.style.display = 'inline-block';
-  //   nav[0].classList.add('active');
-  // })
-  // Cerrar el menú
-  // menuClose.addEventListener('click', () => {
-  //   menuClose.style.display = 'none';
-  //   menuOpen.style.display = 'inline-block';
-  //   nav[0].classList.remove('active');
-  // })
-  //- Sacar iconos cuando el ancho es >= 768px
-  
+ 
   window.addEventListener("resize", () => {
-    // if (window.innerWidth >= 768){
-    //   navMobile.style.display = 'none';
-    //   navPC.style.display = 'inline-block';
-    // } else {
-    //   navMobile.style.display = 'inline-block';
-    //   navPC.style.display = 'none';
-    // }
     menuResponsive();
   });
 
+  //------ Menu hamburguesa
+  openMenu.addEventListener('click', () => {
+    cerrarMenu();
+  })
+  
+  closeMenu.addEventListener('click', () => {
+    abrirMenu();
+  })
 
   //------ popups para los proyectos
   cafeArte.addEventListener('click', () => {
@@ -65,7 +53,7 @@ console.log(navMobile);
       titleNav[0].style.opacity = '0';
     }
 
-    // Efectos para el home
+    // Efectos para la home
     if(window.scrollY > window.innerHeight/4) {
       header[0].classList.add('solid-navBar')
     } else {
@@ -85,29 +73,40 @@ console.log(navMobile);
     } else if (window.scrollY < proyectsAnimations[0].getBoundingClientRect().top + 50){
       proyectsAnimations[0].classList.remove('proyects-animations-active');
     }
-    if(window.scrollY > proyectsAnimations[1].getBoundingClientRect().top - 50){
+    if(window.scrollY > proyectsAnimations[1].getBoundingClientRect().top - 100){
       proyectsAnimations[1].classList.add('proyects-animations-active');
     } else if (window.scrollY < proyectsAnimations[1].getBoundingClientRect().top + 50){
       proyectsAnimations[1].classList.remove('proyects-animations-active');
     }
-    if(window.scrollY > proyectsAnimations[2].getBoundingClientRect().top - 50){
+    if(window.scrollY > proyectsAnimations[2].getBoundingClientRect().top - 200){
       proyectsAnimations[2].classList.add('proyects-animations-active');
     } else if (window.scrollY < proyectsAnimations[2].getBoundingClientRect().top + 50){
       proyectsAnimations[2].classList.remove('proyects-animations-active');
     }
 
   }
+  let abrirMenu = () =>{
+    openMenu.style.display = 'block';
+    closeMenu.style.display = 'none';
+    linksMovile.style.left = "-100vw";
+  }
+
+  let cerrarMenu = () =>{
+    openMenu.style.display = 'none';
+    closeMenu.style.display = 'block';
+    linksMovile.style.left = "0vw";
+  }
 
   let menuResponsive = () => {
     if (window.innerWidth >= 768){
       navMobile.style.display = 'none';
       navPC.style.display = 'inline-block';
+      abrirMenu()
     } else {
       navMobile.style.display = 'inline-block';
       navPC.style.display = 'none';
     }
   }
-
 
   let popupWindow = (uri, title,dim) => { 
     window.open(uri,title,dim) 
@@ -115,5 +114,6 @@ console.log(navMobile);
 
   scrollEfects();
   menuResponsive();
+  abrirMenu();
 });
 

@@ -12,6 +12,8 @@ window.addEventListener('load', () =>{
   const humulus = document.getElementById('humulus')
   const worldCup = document.getElementById('worldCup');
   const proyectsAnimations = document.getElementsByClassName('proyects-animations');
+  const networkText = document.querySelectorAll(".network-text")
+  console.log(networkText);
 
   //------ Lógica para pasar de fondo transparente a fondo con color del header en el index.
   window.addEventListener('scroll', () => {
@@ -101,10 +103,12 @@ window.addEventListener('load', () =>{
     if (window.innerWidth >= 768){
       navMobile.style.display = 'none';
       navPC.style.display = 'inline-block';
-      abrirMenu()
+      abrirMenu();
+      agregarTextoRedes();
     } else {
       navMobile.style.display = 'inline-block';
       navPC.style.display = 'none';
+      quitarTextoRedes();
     }
   }
 
@@ -112,8 +116,26 @@ window.addEventListener('load', () =>{
     window.open(uri,title,dim) 
   };
 
+  let quitarTextoRedes = () => {
+    Array.from(networkText).forEach(element=>{
+      element.style.display = 'none';
+     })
+
+  }
+
+  let agregarTextoRedes = () => {
+    Array.from(networkText).forEach(element=>{
+      element.style.display = 'block'
+    })
+  }
+
   scrollEfects();
   menuResponsive();
   abrirMenu();
 });
 
+
+// github.com/DamianMuracciole
+// linkedin.com/in/damian-muracciole
+// damianmuracciole@gmail.com
+// descargar CV

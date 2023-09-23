@@ -120,6 +120,11 @@ nav > div > a:hover {
   height: auto;
 }
 
+#open-menu,
+#close-menu{
+  display: none;
+}
+
 #links-movile{
   font-size: 1.5rem;
   font-weight: 600;
@@ -132,7 +137,7 @@ nav > div > a:hover {
   padding: 0 .5rem;
   position: absolute;
   top: 5rem;
-  left: 0;
+  left: -100vw;
   transition: text-shadow 200ms ease,
               all 500ms ease;
   display: flex;
@@ -313,26 +318,84 @@ main > section {
 }
 
 
-/* Contacto */
+/* -------------  Contacto ----------------*/
 
 #contact > .secciones > article{
+  width: 100%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
 }
 
-.email,
+#contact > .secciones > h2{
+  text-align: center;
+}
+
 .redes{
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.redes > div{
+  margin: 2rem 0;
+  padding: .5rem;
+}
+
+.redes > div > a {
+  color: var(--dark-font);
+}
+
+i.networks-icon{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:flex-start;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 1s ease;
+}
+
+i.networks-icon:hover{
+  box-shadow: 1px 1px 5px rgb(223, 222, 222);
+}
+
+.email{
+  width: 100%;
+}
+
+.email > form{
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+} 
+
+.email > form input,
+.email > form textarea,
+.email > form button{
+  font-size: .9rem;
+  font-style: italic;
+  padding: .4rem;
+  margin: .5rem 0;
+  border: 1px solid var(--dark-grey-primary-with-opacity);
+  border-radius: 3px;
+}
+
+.email > form button{
+  background-color: var(--dark-grey-primary);
+  color: var(--light-font);
+  font-weight: 400;
+  width: 50%;
+
+  margin: .5rem 0;
 }
 
 /* edicion de iconos */
-.icon > img{
-  background-color: beige;
-  color: pink;
+.icon > img,
+.networks-icon > img{
+  background-color: white;
   height: 1.5rem;
-  fill: pink;
+  margin: 0 5px;
 }
 
 
@@ -454,10 +517,24 @@ main > section {
     /* padding: 4rem 2rem; */
   }
 
+  #contact > .secciones{
+    width: 80%;
+  }
   #contact > .secciones > article{
+
     flex-flow: row nowrap;
+    justify-content:space-around;
+    align-items:center;
   }
 
+  .redes{
+    margin: 1rem;
+    flex-flow: column wrap;
+  }
+
+  .redes > div{
+    padding: 0;
+  }
 }
 
 @media(min-width: 992px){

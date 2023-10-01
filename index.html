@@ -177,6 +177,81 @@
         </div>
       </section>
 
+      <section id="my-career" class="back-2">
+        <div class="secciones">
+          <h2 class="title-31 ">Mis pasos</h2>
+          <div class="step">
+            <div class="icon">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="text-my-carrer">
+              <p>
+                Mi experiencia en desarrollo incluye haber trabajado como Desarrollador Full Stack en el proyecto integrador de CAFEARTE.COM, donde apliqué todo lo aprendido durante mi formación en Digital House. Durante este proyecto, trabajé en un equipo de cuatro integrantes, lo que reforzó mi capacidad para colaborar y comunicarme eficientemente con mis colegas. Además, tuve la oportunidad de trabajar con herramientas como Postman, APIs y Git, entre otras, lo que amplió mis conocimientos técnicos.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="icon">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="text-my-carrer">
+              <p>
+                A lo largo de mi carrera, he tenido la oportunidad de trabajar tanto en equipos como de forma individual, y encuentro un gran valor en el trabajo colaborativo, ya que creo que la combinación de habilidades y perspectivas diferentes puede conducir a soluciones más sólidas y creativas. Mi perfil técnico y metódico me permite abordar problemas de manera eficiente y efectiva, mientras que mi costado educador me impulsa a compartir conocimientos y ser un compañero colaborativo en el equipo.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="icon">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="text-my-carrer">
+              <p>
+                Además de mi formación en desarrollo web, también tengo experiencia en el área de Ingeniería en automatización, donde trabajé con programación de automatismos utilizando PLC y sistemas embebidos. En mi rol como Analista de vibraciones Nivel I, adquirí habilidades adicionales en el análisis de datos y resolución de problemas. Asimismo, en mi experiencia como Ingeniero de desarrollo electrónico, pude desarrollar habilidades en la programación de microcontroladores en lenguaje C.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="icon">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="text-my-carrer">
+              <p>
+                Soy una persona que valora el buen trato y el respeto en el ambiente laboral. Creo que el trabajo en equipo es fundamental para alcanzar los objetivos y disfruto trabajar con personas con diferentes experiencias y habilidades.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="icon">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="text-my-carrer">
+              <p>
+                Además de mi formación y experiencia, también he participado en diversos cursos para continuar enriqueciendo mis conocimientos, incluyendo un Experto Universitario de Seguridad de la Información y cursos de PHP, MySQL y programación de microcontroladores en BASIC y C.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="icon">
+              <div class="circle"></div>
+            </div>
+            <div class="text-my-carrer">
+              <p>
+                Siempre estoy dispuesto a aprender y enfrentar nuevos retos, y estoy emocionado de formar parte de proyectos que me permitan seguir creciendo como profesional y como persona.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div class="secciones">
           <h2 class="title-4" >Contacto</h2>
@@ -221,12 +296,19 @@
 
 
             <div class="email">
-              <form>
+              <form action="https://formsubmit.co/damianmuracciole@gmail.com" method="POST">
                 <p>Escribime!</p>
-                <input type="text" placeholder="Nombre" />
-                <input type="email" placeholder="Correo electrónico" />
-                <textarea placeholder="Mensaje"></textarea>
-                <button type="submit">Enviar</button>
+                <label for="name">Nombre</label>
+                <input type="text" name="name"  required/>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" required/>
+
+                <label for="email">Mensaje</label>
+                <textarea required name="mensaje"></textarea>
+
+                <button type="submit" >Enviar</button>
+
               </form>
             </div>
           </article>
@@ -235,5 +317,8 @@
     </main>
     <footer></footer>
     <script src="script.js"></script>
+    <!-- Otros iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

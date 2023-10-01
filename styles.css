@@ -7,6 +7,10 @@
   --dark-font:  #181818;
   --light-font: #ffe9cb;
   --link-hover: #ffb87d;
+  --green-hover: #6f7a0b;
+
+  --light-green: #c9f8ae;
+  --light-green: #c9f8ae;
   /* fonts */
   --font-titles:'Mulish', sans-serif;
   --font: 'Poppins', sans-serif;
@@ -30,9 +34,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   padding: 0%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 /*Fuente general y tamaño por defecto (1rem)*/
@@ -193,6 +197,13 @@ main > section {
   color: var(--light-font);
 }
 
+.title-31{
+  font-family: var(--font);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: orangered;
+}
+
 .title-4{
   font-family: var(--font);
   font-size: 2.5rem;
@@ -261,6 +272,10 @@ main > section {
   background-color: var(--light-grey-primary-with-opacity);
 }
 
+.back-2{
+  background-color: var(--light-green);
+}
+
 /*---  SECCION: Mis proyectos ---*/
 
 #proyects > .secciones > article {
@@ -316,6 +331,116 @@ main > section {
   color: aliceblue;
   font-size: 4rem;
 }
+
+/* -------------  Mis pasos ---------------- */
+.step{
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items:stretch;
+}
+
+.step{
+  height: inherit;
+  position: relative;
+  overflow-x: clip;
+}
+.step > .icon{
+  padding: 0;
+  margin: 0;
+}
+
+.step > .icon > .circle{
+  width: 1rem;
+  height:1rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  opacity: 0;
+  transition: opacity 1s ease,
+              background-color 1s ease;
+}
+.step > .icon >.line{
+  width: 1px;
+  height: calc(100% + 1rem);
+  transform: scaleY(0);
+  margin: 0 7px;
+  padding: 0;
+  position: absolute;
+  top: calc(-50% + 0.5rem);
+  /* top: calc(1rem - 50%); */
+  border: 1px solid black;
+}
+
+.step > .text-my-carrer{
+padding: 0 1rem 0 3rem;
+margin: 0;
+}
+
+.step > .text-my-carrer{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+  right: -60vw;
+  transition: right 1.5s ease;
+}
+
+.step > .text-my-carrer > p {
+  text-align: justify;
+  padding: 0 3rem 1rem 1rem ;
+}
+
+
+.animation-on{
+  animation-name: animation-on;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  animation-direction:normal;
+  animation-fill-mode:forwards;
+  animation-play-state: running;
+  position: absolute;
+  top: 1rem;
+}
+
+.animation-off{
+  animation-name: animation-off;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction:reverse;
+  animation-fill-mode:backwards;
+  animation-play-state:running;
+  position: absolute;
+  top:var(100%)
+}
+
+@keyframes animation-on{
+  0%{
+    transform: scaleY(0);
+    top:var(-50% + 1rem)
+
+  }
+  100%{
+    transform: scaleY(1);
+    top: 1rem
+  }
+}
+
+@keyframes animation-off{
+  0%{
+    transform: scaleY(0);
+    top:var(-50%)
+  }
+  100%{
+    transform: scaleY(1);
+    top:1rem;
+  }
+}
+
 
 
 /* -------------  Contacto ----------------*/
@@ -373,12 +498,31 @@ i.networks-icon:hover{
 .email > form input,
 .email > form textarea,
 .email > form button{
+  width: 100%;
   font-size: .9rem;
   font-style: italic;
   padding: .4rem;
   margin: .5rem 0;
   border: 1px solid var(--dark-grey-primary-with-opacity);
   border-radius: 3px;
+  transition: box-shadow 300ms ease,
+              background-color 300ms ease,
+              color 50ms 200ms ease;
+}
+
+.email > form > input:hover,
+.email > form > textarea:hover{
+  border: 1px solid var(--green-hover);
+  box-shadow: 1px 1px 3px var(--green-hover);
+}
+
+.email > form > button:hover{
+  color: var(--dark-font);
+  background-color: rgb(221, 217, 217)
+}
+
+.email > form textarea{
+  height: 8rem;
 }
 
 .email > form button{
@@ -534,6 +678,12 @@ i.networks-icon:hover{
 
   .redes > div{
     padding: 0;
+  }
+
+  .email > form input,
+  .email > form textarea,
+  .email > form button{
+    width: 75%;
   }
 }
 

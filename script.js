@@ -12,12 +12,16 @@ window.addEventListener('load', () =>{
   const humulus = document.getElementById('humulus')
   const worldCup = document.getElementById('worldCup');
   const proyectsAnimations = document.getElementsByClassName('proyects-animations');
-  const networkText = document.querySelectorAll(".network-text")
-  console.log(networkText);
+  const myCarrerText = document.querySelectorAll('.text-my-carrer')
+  const networkText = document.querySelectorAll(".network-text");
+  const myCarrercircle = document.querySelectorAll(".circle");
+  const myCarrerline = document.querySelectorAll(".line");
 
+  console.log(myCarrerline);
   //------ Lógica para pasar de fondo transparente a fondo con color del header en el index.
   window.addEventListener('scroll', () => {
     scrollEfects();
+      
   });
 
  
@@ -86,7 +90,36 @@ window.addEventListener('load', () =>{
       proyectsAnimations[2].classList.remove('proyects-animations-active');
     }
 
+    //Efectos para mis pasos
+    myCarrerText.forEach(element => {
+      (element.getBoundingClientRect().top - 500 < 0)
+      ? element.style.right = "-3rem"
+      : element.style.right = "-100vw";
+    })
+
+    myCarrercircle.forEach(element => {
+      (element.getBoundingClientRect().top - 500 < 0)
+      ? element.style.opacity = "1"
+      : element.style.opacity = "0";
+      (element.getBoundingClientRect().top - 400 < 0)
+      ? element.style.backgroundColor = "orange"
+      : element.style.backgroundColor = "white";
+    })
+
+    myCarrerline.forEach(element => {
+      if (element.getBoundingClientRect().top - 516 < 0){
+        element.classList.add('animation-on');
+        element.classList.remove('animation-off');
+      } else{
+        element.classList.add('animation-off');
+        element.classList.remove('animation-on');
+      }
+    })
+
+
   }
+
+
   let abrirMenu = () =>{
     openMenu.style.display = 'block';
     closeMenu.style.display = 'none';

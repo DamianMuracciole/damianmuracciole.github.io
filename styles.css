@@ -338,9 +338,15 @@ main > section {
 }
 
 /* -------------  Sobre mi ---------------- */
-#about-me > .secciones > p{
-  margin: 1rem;
+#about-me > .secciones > p.about-me-text{
+  display: block;
+  margin: .5rem 3rem;
+  font-size: 1.2rem;
+  color: #181818;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
 }
+
 
 /* -------------  Mis pasos ---------------- */
 .step{

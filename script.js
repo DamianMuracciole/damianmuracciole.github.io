@@ -16,12 +16,11 @@ window.addEventListener('load', () =>{
   const networkText = document.querySelectorAll(".network-text");
   const myCarrercircle = document.querySelectorAll(".circle");
   const myCarrerline = document.querySelectorAll(".line");
+  const aboutMeText = document.querySelectorAll(".about-me-text")
 
-  console.log(myCarrerline);
   //------ Lógica para pasar de fondo transparente a fondo con color del header en el index.
   window.addEventListener('scroll', () => {
-    scrollEfects();
-      
+    scrollEfects(); 
   });
 
  
@@ -29,7 +28,7 @@ window.addEventListener('load', () =>{
     menuResponsive();
   });
 
-  //------ Menu hamburguesa
+  //------ Menu hamburguesa  -----------
   openMenu.addEventListener('click', () => {
     cerrarMenu();
   })
@@ -52,6 +51,11 @@ window.addEventListener('load', () =>{
   });
 
   let scrollEfects = () => {
+    //valor de la altura del screen
+    let ScreenHeight = window.screen.height;
+    const offSetTextAboutMe = ScreenHeight * 0.7;
+    const offSetMyCarrer = ScreenHeight * 0.5;
+
     // Efectos para la nav
     if(window.scrollY > window.innerHeight-100) {
       titleNav[0].style.opacity = '1';
@@ -90,24 +94,31 @@ window.addEventListener('load', () =>{
       proyectsAnimations[2].classList.remove('proyects-animations-active');
     }
 
+    //Efectos en About Me
+    aboutMeText.forEach(element => {
+      (element.getBoundingClientRect().top - offSetTextAboutMe < 0)
+      ? element.style.opacity = "1"
+      : element.style.opacity = "0";
+    })
+
     //Efectos para mis pasos
     myCarrerText.forEach(element => {
-      (element.getBoundingClientRect().top - 500 < 0)
+      (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.right = "-3rem"
       : element.style.right = "-100vw";
     })
 
     myCarrercircle.forEach(element => {
-      (element.getBoundingClientRect().top - 500 < 0)
+      (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.opacity = "1"
       : element.style.opacity = "0";
-      (element.getBoundingClientRect().top - 400 < 0)
+      (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.backgroundColor = "orange"
       : element.style.backgroundColor = "white";
     })
 
     myCarrerline.forEach(element => {
-      if (element.getBoundingClientRect().top - 516 < 0){
+      if (element.getBoundingClientRect().top - offSetMyCarrer < 0){
         element.classList.add('animation-on');
         element.classList.remove('animation-off');
       } else{

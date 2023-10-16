@@ -8,10 +8,11 @@ window.addEventListener('load', () =>{
   const navPC = document.getElementById('nav-pc');
   const name = document.getElementById('name');
   const description = document.getElementById('description');
-  const cafeArte = document.getElementById('cafeArte');
-  const humulus = document.getElementById('humulus')
-  const worldCup = document.getElementById('worldCup');
-  const proyectsAnimations = document.getElementsByClassName('proyects-animations');
+  // const cafeArte = document.getElementById('cafeArte');
+  // const humulus = document.getElementById('humulus')
+  // const worldCup = document.getElementById('worldCup');
+  // const proyectsAnimations = document.getElementsByClassName('proyects-animations');
+  const cardProyects = document.querySelectorAll('.card-proyects')
   const myCarrerText = document.querySelectorAll('.text-my-carrer')
   const networkText = document.querySelectorAll(".network-text");
   const myCarrercircle = document.querySelectorAll(".circle");
@@ -38,15 +39,24 @@ window.addEventListener('load', () =>{
   })
 
   //------ popups para los proyectos
-  cafeArte.addEventListener('click', () => {
+  // cafeArte.addEventListener('click', () => {
+  //   popupWindow('./cafeArteView.html','Café Arte','popup');
+  // });
+
+  // humulus.addEventListener('click', () => {
+  //   popupWindow('./humulusView.html','Humulus','popup'); // 'left=100,top=100,width=320,height=320');
+  // });
+
+
+  cardProyects[0].addEventListener('click', () => {
     popupWindow('./cafeArteView.html','Café Arte','popup');
   });
 
-  humulus.addEventListener('click', () => {
+cardProyects[1].addEventListener('click', () => {
     popupWindow('./humulusView.html','Humulus','popup'); // 'left=100,top=100,width=320,height=320');
   });
 
-  worldCup.addEventListener('click', () => {
+  cardProyects[2].addEventListener('click', () => {
     popupWindow('./worldCupView.html','worldCup2019','popup'); // 'left=100,top=100,width=320,height=320':
   });
 
@@ -78,21 +88,21 @@ window.addEventListener('load', () =>{
     }
 
     // efectos para proyectos
-    if(window.scrollY > proyectsAnimations[0].getBoundingClientRect().top - 100){
-      proyectsAnimations[0].classList.add('proyects-animations-active');
-    } else if (window.scrollY < proyectsAnimations[0].getBoundingClientRect().top + 50){
-      proyectsAnimations[0].classList.remove('proyects-animations-active');
-    }
-    if(window.scrollY > proyectsAnimations[1].getBoundingClientRect().top - 100){
-      proyectsAnimations[1].classList.add('proyects-animations-active');
-    } else if (window.scrollY < proyectsAnimations[1].getBoundingClientRect().top + 50){
-      proyectsAnimations[1].classList.remove('proyects-animations-active');
-    }
-    if(window.scrollY > proyectsAnimations[2].getBoundingClientRect().top - 200){
-      proyectsAnimations[2].classList.add('proyects-animations-active');
-    } else if (window.scrollY < proyectsAnimations[2].getBoundingClientRect().top + 50){
-      proyectsAnimations[2].classList.remove('proyects-animations-active');
-    }
+    // if(window.scrollY > proyectsAnimations[0].getBoundingClientRect().top - 100){
+    //   proyectsAnimations[0].classList.add('proyects-animations-active');
+    // } else if (window.scrollY < proyectsAnimations[0].getBoundingClientRect().top + 50){
+    //   proyectsAnimations[0].classList.remove('proyects-animations-active');
+    // }
+    // if(window.scrollY > proyectsAnimations[1].getBoundingClientRect().top - 100){
+    //   proyectsAnimations[1].classList.add('proyects-animations-active');
+    // } else if (window.scrollY < proyectsAnimations[1].getBoundingClientRect().top + 50){
+    //   proyectsAnimations[1].classList.remove('proyects-animations-active');
+    // }
+    // if(window.scrollY > proyectsAnimations[2].getBoundingClientRect().top - 200){
+    //   proyectsAnimations[2].classList.add('proyects-animations-active');
+    // } else if (window.scrollY < proyectsAnimations[2].getBoundingClientRect().top + 50){
+    //   proyectsAnimations[2].classList.remove('proyects-animations-active');
+    // }
 
     //Efectos en About Me
     aboutMeText.forEach(element => {
@@ -112,7 +122,7 @@ window.addEventListener('load', () =>{
       (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.opacity = "1"
       : element.style.opacity = "0";
-      (element.getBoundingClientRect().top - offSetMyCarrer < 0)
+      (element.getBoundingClientRect().top - offSetMyCarrer < -20)
       ? element.style.backgroundColor = "orange"
       : element.style.backgroundColor = "white";
     })

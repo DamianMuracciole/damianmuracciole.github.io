@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Damiían Muracciole</title>
-  <!-- stylesheet -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
-  <main>
-    <article>
-      <h3 class="title-5">Women's World Cup 2019</h3>
-        <img src="./images/proyects/mundial/Mundial.png" alt="CafeArte"
-        style="  
-          width: 70vw;
-          margin: 1rem 15vw; ">
-        <p
-        style="  
-          width: 70vw;
-          margin: 1rem 15vw; ">
-        A partir de una API pública generado el la URI https://worldcup.sfg.io/ era posible podr ver todos los resultados y demás datos del Mundial femenino Francia 2019. La idea de esta aplicacion era poder mostrar la importancia del futbol femenino mostrando las estadisticas de dicho evento.</p>    </article>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damiían Muracciole</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="pop-ups-style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Quicksand:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="pop-ups">
+      <article>
+        <section>
+          <h3 class="title-5">Women's World Cup 2019</h3>
+          <img
+            src="./images/proyects/mundial/Mundial-index.png"
+            alt="CafeArte"
+          />
+          <p>
+            A partir de una API pública generado el la URI
+            <a href="https://worldcup.sfg.io">https://worldcup.sfg.io</a>
+            era posible ver todos los resultados y demás datos y estadísticas
+            del Mundial femenino Francia 2019. La idea de esta aplicacion era
+            poder mostrar la importancia del futbol femenino mostrando las
+            estadisticas de dicho evento. Tal API dejó de funcionar. 
+          </p>
+          <p>
+            Habiendo pasado esto, generamos nuestro propio servidor para poder
+            hacer funcional la página.
+          </p>
+          <p>Proyecto realizado en conjunto con <a href="https://github.com/gastonh017"><b>Gastón Heiler</b> </p></a>
+        </section>
+
+        <section class="tecnologías">
+          <h4 class="main-title">Tecnologías</h4>
+          <p>Este proyecto está realizado con las siguientes tecnologías</p>
+          <div>
+            <i class="icon"><img src="./images/svg/html5.svg" alt="html5" /></i>
+            <i class="icon"><img src="./images/svg/css3.svg" alt="css3" /></i>
+            <i class="icon"><img src="./images/svg/js.svg" alt="JS" /></i>
+            <i class="icon"><img src="./images/svg/react.svg" alt="react" /></i>
+            <i class="icon"><img src="./images/svg/git.svg" alt="git" /></i>
+          </div>
+        </section>
+
+        <section class="contenido">
+          <h4 class="main-title">Contenido</h4>
+          <p>Consta de cuatro secciones donde es posible encontrar informarcion desde los equipos que se presentarn, datos y estadisticas de cada partido o resultado del fixture</p>
+          <p class="content-title">Grupos</p>
+          <article class="grupos">
+            <p>Describe los la tabla de posiciones de cada grupo de la fase de grupo</p>
+            <img src="./images/proyects/mundial/Mundial-fase.png" alt="">
+          </article>
+          <p class="content-title">Equipos</p>
+          <article class="equipos">
+            <p>Muestra cada uno de los equipos que conformaron el mundial con informacion de los mismos</p>
+            <img src="./images/proyects/mundial/Mundial-equipos.png" alt="">
+          </article>
+          <p class="content-title">Partidos</p>
+          <article class="partidos">
+            <p>Da en detalle cada uno de sis partidos</p>
+            <img src="./images/proyects/mundial/Mundial-partidos.png" alt="">
+          </article>
+          <article class="partidos">
+            <p>En el botón "...mas info" se detalla cada uno de los partidos con estadisticas del juego</p>
+            <img src="./images/proyects/mundial/Mundial-partidos-masinfo.png" alt="">
+          </article>
+          <p class="content-title">Estadios</p>
+          <article class="estadios">
+            <p> Contempla cada estadio utilizado en el mundial y la cantidad de partidos realizados</p>
+            <img src="./images/proyects/mundial/Mundial-estadios.png" alt="">
+          </article>
+        </section>
+        <section class="contenido">
+          <h4 class="main-title">Link</h4>
+          <a href="https://github.com/gastonh017/WWCC22">github</a>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>

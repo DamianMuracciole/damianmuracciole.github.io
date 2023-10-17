@@ -122,16 +122,16 @@ cardProyects[1].addEventListener('click', () => {
       (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.opacity = "1"
       : element.style.opacity = "0";
-      (element.getBoundingClientRect().top - offSetMyCarrer < -20)
+      (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.backgroundColor = "orange"
       : element.style.backgroundColor = "white";
     })
 
     myCarrerline.forEach(element => {
-      if (element.getBoundingClientRect().top - offSetMyCarrer < 0){
+      if (element.getBoundingClientRect().top - offSetMyCarrer < -150){
         element.classList.add('animation-on');
         element.classList.remove('animation-off');
-      } else{
+      } else if (element.getBoundingClientRect().top - offSetMyCarrer > -200){
         element.classList.add('animation-off');
         element.classList.remove('animation-on');
       }

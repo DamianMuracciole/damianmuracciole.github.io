@@ -1,0 +1,54 @@
+/* Estilos para las ventanas emergentes */
+
+#pop-ups > article > section{
+  padding: 2rem 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:space-between;
+  align-items: center;
+}
+
+#pop-ups > article > section> img{
+  width: 50vw;
+  padding: 2rem;
+}
+
+#pop-ups > article > section > p{
+  width: 70vw; 
+  padding: .5rem 0;
+}
+
+.tecnologías > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.tecnologías > div > i > img{
+  margin: 1rem;
+  width: 50px;
+  height: auto;
+}
+
+.contenido > article {
+  width: 70%;
+  display: flex;
+  flex-flow: row;
+}
+
+.contenido > article > p{
+  width: 60%; 
+  padding: 1rem 3rem;
+}
+
+.contenido > article > img{
+  width: 40%; 
+  padding: 2rem 1rem;
+}
+
+.main-title{
+  font-size: 1.8rem;
+}
+.content-title{
+  font-size: 1.5rem;
+}

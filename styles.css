@@ -79,7 +79,7 @@ nav {
   font-size: .8rem;
   font-weight: 200;
   text-align: end;
-  padding: 1rem 1rem;
+  padding: 1rem 3rem;
   width: 100%;
   position:fixed;
   top: 0;
@@ -370,15 +370,19 @@ main > section {
 }
 
 .card-proyects-img1{
-  background-image: url("./images/proyects/cafearte/CaféArte.webp");
+  background: center/cover no-repeat url("./images/proyects/cafearte/cafeArte.webp");
+  
+  /* background-image: url("./images/proyects/cafearte/CaféArte.webp"); */
 }
 
 .card-proyects-img2{
-  background-image: url("./images/proyects/humulus/Humulus.webp");
+  background: center/cover no-repeat url("./images/proyects//humulus/humulus.webp");
+  /* background-image: url("./images/proyects/humulus/Humulus.webp"); */
 }
 
 .card-proyects-img3{
-  background-image: url("./images/proyects/mundial/Mundial.webp");
+  background: center/cover no-repeat url("./images/proyects/mundial/mundial.webp");
+  /* background-image: url("./images/proyects/mundial/Mundial.webp"); */
 }
 
 .card-proyects-top-text{
@@ -610,6 +614,7 @@ margin: 0;
 }
 
 i.networks-icon{
+  height: 1rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content:flex-start;
@@ -620,6 +625,10 @@ i.networks-icon{
 
 i.networks-icon:hover{
   box-shadow: 1px 1px 5px rgb(223, 222, 222);
+}
+
+i.networks-icon > img{
+  height: 2rem;
 }
 
 .email{
@@ -688,10 +697,6 @@ i.networks-icon:hover{
 /* medias query */
 
 @media(min-width: 576px){
-  nav {
-    font-size: 1rem;
-  }
-
   nav > div.name-nav > span{
     font-size: .9rem;
   }
@@ -710,11 +715,13 @@ i.networks-icon:hover{
 
 @media(min-width: 768px){
   nav {
-    padding: 1rem 2rem;
+    padding: 1rem 2vw;
   }
 
-  nav > div.name-nav > span{
-    font-size: 1rem;
+  nav > div > a {
+    word-spacing: normal;
+    padding: 0 1vw;
+    font-size: .9rem;
   }
 
 
@@ -790,36 +797,12 @@ i.networks-icon:hover{
     top: calc(10vh + 12rem);
   }
 
-  /* mis proyectos */
-  /* .proyect-container{
-    max-width: 1200px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .proyects-animations:nth-child(even) > .proyect-container{
-    flex-flow: row-reverse nowrap;
-    text-align: right;
-  }
-
-  .proyect-container > img {
-    min-width: 45%;
-    cursor: pointer;
-  }
-
-  .proyect-container > div >  p {
-    font-size: .9rem;
-  } */
-
 
   /* Mis proyectos */
-  
-  /* nueva card */
+
   #proyects > .secciones > div > article {
-    width: 75%;
-    height: 60vh;
+    width: 50vw;
+    height: 40vw;
   }
 
   .secciones > div {
@@ -871,9 +854,18 @@ i.networks-icon:hover{
 }
 
 @media(min-width: 992px){
+  nav {
+    padding: 1rem 2rem;
+  }
+
   nav > div > a {
-    word-spacing: .5rem;
+    word-spacing:normal;
     padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  nav > div.name-nav > span{
+    font-size: 1rem;
   }
 
   /* -------------  Mis proyectos ----------------*/

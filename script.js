@@ -8,10 +8,6 @@ window.addEventListener('load', () =>{
   const navPC = document.getElementById('nav-pc');
   const name = document.getElementById('name');
   const description = document.getElementById('description');
-  // const cafeArte = document.getElementById('cafeArte');
-  // const humulus = document.getElementById('humulus')
-  // const worldCup = document.getElementById('worldCup');
-  // const proyectsAnimations = document.getElementsByClassName('proyects-animations');
   const cardProyects = document.querySelectorAll('.card-proyects')
   const myCarrerText = document.querySelectorAll('.text-my-carrer')
   const networkText = document.querySelectorAll(".network-text");
@@ -24,7 +20,6 @@ window.addEventListener('load', () =>{
     scrollEfects(); 
   });
 
- 
   window.addEventListener("resize", () => {
     menuResponsive();
   });
@@ -38,21 +33,11 @@ window.addEventListener('load', () =>{
     abrirMenu();
   })
 
-  //------ popups para los proyectos
-  // cafeArte.addEventListener('click', () => {
-  //   popupWindow('./cafeArteView.html','Café Arte','popup');
-  // });
-
-  // humulus.addEventListener('click', () => {
-  //   popupWindow('./humulusView.html','Humulus','popup'); // 'left=100,top=100,width=320,height=320');
-  // });
-
-
   cardProyects[0].addEventListener('click', () => {
     popupWindow('./cafeArteView.html','Café Arte','popup');
   });
 
-cardProyects[1].addEventListener('click', () => {
+  cardProyects[1].addEventListener('click', () => {
     popupWindow('./humulusView.html','Humulus','popup'); // 'left=100,top=100,width=320,height=320');
   });
 
@@ -87,23 +72,6 @@ cardProyects[1].addEventListener('click', () => {
       description.classList.add('tittle-1-off');
     }
 
-    // efectos para proyectos
-    // if(window.scrollY > proyectsAnimations[0].getBoundingClientRect().top - 100){
-    //   proyectsAnimations[0].classList.add('proyects-animations-active');
-    // } else if (window.scrollY < proyectsAnimations[0].getBoundingClientRect().top + 50){
-    //   proyectsAnimations[0].classList.remove('proyects-animations-active');
-    // }
-    // if(window.scrollY > proyectsAnimations[1].getBoundingClientRect().top - 100){
-    //   proyectsAnimations[1].classList.add('proyects-animations-active');
-    // } else if (window.scrollY < proyectsAnimations[1].getBoundingClientRect().top + 50){
-    //   proyectsAnimations[1].classList.remove('proyects-animations-active');
-    // }
-    // if(window.scrollY > proyectsAnimations[2].getBoundingClientRect().top - 200){
-    //   proyectsAnimations[2].classList.add('proyects-animations-active');
-    // } else if (window.scrollY < proyectsAnimations[2].getBoundingClientRect().top + 50){
-    //   proyectsAnimations[2].classList.remove('proyects-animations-active');
-    // }
-
     //Efectos en About Me
     aboutMeText.forEach(element => {
       (element.getBoundingClientRect().top - offSetTextAboutMe < 0)
@@ -122,22 +90,20 @@ cardProyects[1].addEventListener('click', () => {
       (element.getBoundingClientRect().top - offSetMyCarrer < 0)
       ? element.style.opacity = "1"
       : element.style.opacity = "0";
-      (element.getBoundingClientRect().top - offSetMyCarrer < 0)
+      (element.getBoundingClientRect().top - offSetMyCarrer < -50)
       ? element.style.backgroundColor = "orange"
       : element.style.backgroundColor = "white";
     })
 
     myCarrerline.forEach(element => {
-      if (element.getBoundingClientRect().top - offSetMyCarrer < -150){
+      if (element.getBoundingClientRect().top - offSetMyCarrer < 0){
         element.classList.add('animation-on');
         element.classList.remove('animation-off');
-      } else if (element.getBoundingClientRect().top - offSetMyCarrer > -200){
+      } else if (element.getBoundingClientRect().top - offSetMyCarrer > -50){
         element.classList.add('animation-off');
         element.classList.remove('animation-on');
       }
     })
-
-
   }
 
 
@@ -174,7 +140,6 @@ cardProyects[1].addEventListener('click', () => {
     Array.from(networkText).forEach(element=>{
       element.style.display = 'none';
      })
-
   }
 
   let agregarTextoRedes = () => {
@@ -187,9 +152,3 @@ cardProyects[1].addEventListener('click', () => {
   menuResponsive();
   abrirMenu();
 });
-
-
-// github.com/DamianMuracciole
-// linkedin.com/in/damian-muracciole
-// damianmuracciole@gmail.com
-// descargar CV

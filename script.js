@@ -17,7 +17,7 @@ window.addEventListener('load', () =>{
 
   //------ Lógica para pasar de fondo transparente a fondo con color del header en el index.
   window.addEventListener('scroll', () => {
-    scrollEfects(); 
+    scrollEfects();
   });
 
   window.addEventListener("resize", () => {
@@ -28,7 +28,7 @@ window.addEventListener('load', () =>{
   openMenu.addEventListener('click', () => {
     cerrarMenu();
   })
-  
+
   closeMenu.addEventListener('click', () => {
     abrirMenu();
   })
@@ -106,13 +106,14 @@ window.addEventListener('load', () =>{
     })
   }
 
-
+  // abre menu modo mobile
   let abrirMenu = () =>{
     openMenu.style.display = 'block';
-    closeMenu.style.display = 'none';
+    // closeMenu.style.display = 'none';
     linksMovile.style.left = "-100vw";
   }
 
+  // cierra menu modo mobile
   let cerrarMenu = () =>{
     openMenu.style.display = 'none';
     closeMenu.style.display = 'block';
@@ -132,16 +133,19 @@ window.addEventListener('load', () =>{
     }
   }
 
-  let popupWindow = (uri, title,dim) => { 
-    window.open(uri,title,dim) 
+  // Abre ventanas de los proyectos realizados
+  let popupWindow = (uri, title,dim) => {
+    window.open(uri,title,dim)
   };
 
+  // quita texto los íconos en el modo mobile
   let quitarTextoRedes = () => {
     Array.from(networkText).forEach(element=>{
       element.style.display = 'none';
      })
   }
 
+  // agrega texto los íconos en el modo desktop
   let agregarTextoRedes = () => {
     Array.from(networkText).forEach(element=>{
       element.style.display = 'block'

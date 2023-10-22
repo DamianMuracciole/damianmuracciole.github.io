@@ -132,6 +132,17 @@ nav > div > a:hover {
 #open-menu,
 #close-menu{
   display: none;
+  height: 36px;
+}
+
+#close-menu{
+  width: 100%;
+  height: 1rem;
+}
+
+#close-menu > img{
+  height: 2rem;
+  margin: 0 1rem;
 }
 
 #links-movile{

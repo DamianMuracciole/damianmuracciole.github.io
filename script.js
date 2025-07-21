@@ -53,7 +53,7 @@ window.addEventListener('load', () =>{
     popupWindow('./dulceMartinaView.html','dulcemartina','popup'); // 'left=100,top=100,width=320,height=320':
   });
 
-  let scrollEfects = () => {
+  const scrollEfects = () => {
     //valor de la altura del screen
     let ScreenHeight = window.screen.height;
     const offSetTextAboutMe = ScreenHeight * 0.7;

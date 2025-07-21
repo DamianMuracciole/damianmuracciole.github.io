@@ -8,7 +8,7 @@ window.addEventListener('load', () =>{
   const navPC = document.getElementById('nav-pc');
   const name = document.getElementById('name');
   const description = document.getElementById('description');
-  const cardProyects = document.querySelectorAll('.card-proyects')
+  const cardprojects = document.querySelectorAll('.card-projects')
   const myCarrerText = document.querySelectorAll('.text-my-carrer')
   const networkText = document.querySelectorAll(".network-text");
   const myCarrercircle = document.querySelectorAll(".circle");
@@ -33,16 +33,24 @@ window.addEventListener('load', () =>{
     abrirMenu();
   })
 
-  cardProyects[0].addEventListener('click', () => {
+  cardprojects[0].addEventListener('click', () => {
     popupWindow('./cafeArteView.html','Café Arte','popup');
   });
 
-  cardProyects[1].addEventListener('click', () => {
+  cardprojects[1].addEventListener('click', () => {
     popupWindow('./humulusView.html','Humulus','popup'); // 'left=100,top=100,width=320,height=320');
   });
 
-  cardProyects[2].addEventListener('click', () => {
+  cardprojects[2].addEventListener('click', () => {
     popupWindow('./worldCupView.html','worldCup2019','popup'); // 'left=100,top=100,width=320,height=320':
+  });
+
+  cardprojects[3].addEventListener('click', () => {
+    popupWindow('./qandciView.html','quanci','popup'); // 'left=100,top=100,width=320,height=320':
+  });
+
+  cardprojects[4].addEventListener('click', () => {
+    popupWindow('./dulceMartinaView.html','dulcemartina','popup'); // 'left=100,top=100,width=320,height=320':
   });
 
   let scrollEfects = () => {
